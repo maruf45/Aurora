@@ -1,0 +1,86 @@
+nav {
+    background: #393e46;
+}
+
+.wrapper-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+.wrapper-container ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.wrapper-container ul li a {
+    text-decoration: none;
+    color: #eeeeee;
+    font-weight: 400;
+}
+
+.wrapper-container .avatar {
+    gap: 10px;
+}
+
+.wrapper-container ul .profile {
+    display: flex;
+}
+
+.wrapper-container ul .profile img {
+    width: 40px;
+}
+
+.wrapper-container .logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.wrapper-container .logo img {
+    width: 60px;
+}
+
+.wrapper-container .logo a p {
+    color: #eeeeee;
+    font-size: 28px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+.wrapper-container svg {
+    color: #eeeeee;
+    width: 35px;
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper-container {
+        padding: 10px 15px;
+    }
+
+    .wrapper-container ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        align-items: center;
+        visibility: hidden;
+    }
+    .wrapper-container .avatar{
+        left: 130px;
+    }
+    .nav-collapse{
+        height: 350px !important;
+    }
+
+    .wrapper-container svg {
+        display: block;
+    }
+    .nav-collapse .wrapper-container ul{
+        visibility: visible;
+    }
+}
