@@ -1,5 +1,5 @@
 nav {
-    background: #393e46;
+    background: #222831;
 }
 
 .wrapper-container {
@@ -46,13 +46,13 @@ nav {
 }
 
 .wrapper-container .logo a p {
-    color: #eeeeee;
+    color: #ffd369;
     font-size: 28px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
 }
 
-.wrapper-container svg {
+.toggle-btn svg {
     color: #eeeeee;
     width: 35px;
     display: none;
@@ -77,7 +77,7 @@ nav {
         height: 350px !important;
     }
 
-    .wrapper-container svg {
+    .wrapper-container .toggle-btn svg {
         display: block;
     }
     .nav-collapse .wrapper-container ul{

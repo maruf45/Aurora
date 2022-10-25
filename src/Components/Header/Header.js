@@ -15,6 +15,31 @@ const Header = () => {
               <p>Aurora</p>
             </NavLink>
           </div>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="courses">Courses</NavLink>
+            </li>
+            <li>
+              <NavLink to="faq">FAQ</NavLink>
+            </li>
+            <li>
+              <NavLink to="blogs">Blogs</NavLink>
+            </li>
+          </ul>
+          <ul className="avatar">
+            <div className="profile">
+              <img
+                src="https://i.ibb.co/GnhkKS2/bubble-gum-avatar-icon.png"
+                alt=""
+              />
+            </div>
+            <li>
+              <NavLink to="signin">Sign in</NavLink>
+            </li>
+          </ul>
           <div className="toggle-btn" onClick={() => setToggle(!toggle)}>
             {toggle ? (
               <svg
@@ -47,31 +72,6 @@ const Header = () => {
               </svg>
             )}
           </div>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="courses">Courses</NavLink>
-            </li>
-            <li>
-              <NavLink to="faq">FAQ</NavLink>
-            </li>
-            <li>
-              <NavLink to="blogs">Blogs</NavLink>
-            </li>
-          </ul>
-          <ul className="avatar">
-            <div className="profile">
-              <img
-                src="https://i.ibb.co/GnhkKS2/bubble-gum-avatar-icon.png"
-                alt=""
-              />
-            </div>
-            <li>
-              <NavLink to="login">Login</NavLink>
-            </li>
-          </ul>
         </div>
       </nav>
     </>

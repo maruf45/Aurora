@@ -1,0 +1,107 @@
+.signin-container,
+.signup-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 90vh;
+}
+
+.signin-wrapper,
+.signup-wrapper {
+    background: #1a212f;
+    padding: 20px 18px;
+    color: #eeeeee;
+    border-radius: 10px;
+}
+
+.signin-wrapper h1,
+.signup-wrapper h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.signin-wrapper h3,
+.signup-wrapper h3 {
+    font-size: 11px;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+.signin-container label,
+.signup-container label {
+    font-size: 12px;
+    font-weight: 100;
+    display: block;
+    margin: 5px 0;
+}
+
+.signin-container input,
+.signup-container input {
+    width: 250px;
+    padding: 7px 8px;
+    border: none;
+    outline: none;
+    background: #e9eff2;
+    border-radius: 5px;
+
+}
+
+.signin-container span,
+.signup-container span {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.signin-container span a,
+.signup-container span a {
+    color: #eeeeee;
+}
+
+.signin-container span a:hover,
+.signup-container span a:hover {
+    text-decoration: underline;
+}
+
+.password-field p {
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.password-field p:hover {
+    text-decoration: underline;
+}
+
+.social-signin p {
+    text-align: center;
+    font-size: 11px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.social-signin button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: none;
+    border: 1.5px solid #eeeeee;
+    cursor: pointer;
+    padding: 8px 15px;
+    color: #eeeeee;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    cursor: pointer;
+}
+
+.social-signin button:hover {
+    border-radius: 50px;
+}
