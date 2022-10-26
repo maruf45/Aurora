@@ -5,3 +5,10 @@
     justify-content: center;
     align-content: center;
 }
+.notFound h1{
+    font-size: 15px;
+}
+.notFound img{
+    width: 100%;
+    margin: auto;
+}
