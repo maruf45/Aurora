@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "courses", element: <Course /> },
-      { path: "blogs", element: <Blogs /> },
+      { path: "blogs", element: <Blogs />, loader: () => fetch('http://localhost:5000/blogs') },
       { path: "signin", element: <SignIn /> },
       { path: "signup", element: <SignUp /> },
       { path: "*" , element: <NotFoundPage/>},
