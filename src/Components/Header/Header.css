@@ -1,5 +1,5 @@
 nav {
-    background: #222831;
+    background: var(--nav-color);
 }
 
 .wrapper-container {
@@ -18,8 +18,13 @@ nav {
 
 .wrapper-container ul li a {
     text-decoration: none;
-    color: #eeeeee;
+    color: var(--text-color);
     font-weight: 400;
+}
+.wrapper-container ul li i{
+    font-size: 25px;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
 .wrapper-container .avatar {
@@ -32,6 +37,9 @@ nav {
 
 .wrapper-container ul .profile img {
     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .wrapper-container .logo a {
@@ -46,21 +54,35 @@ nav {
 }
 
 .wrapper-container .logo a p {
-    color: #ffd369;
+    color: var(--logo-color);
     font-size: 28px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
 }
 
-.toggle-btn svg {
-    color: #eeeeee;
-    width: 35px;
+.toggle-btn {
     display: none;
 }
+
+.toggle-btn i {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 25px;
+    display: none;
+}
+
+a {
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 700px) {
     .wrapper-container {
         padding: 10px 15px;
+    }
+
+    .toggle-btn {
+        display: block;
     }
 
     .wrapper-container ul {
@@ -70,17 +92,20 @@ nav {
         align-items: center;
         visibility: hidden;
     }
-    .wrapper-container .avatar{
+
+    .wrapper-container .avatar {
         left: 130px;
     }
-    .nav-collapse{
+
+    .nav-collapse {
         height: 350px !important;
     }
 
-    .wrapper-container .toggle-btn svg {
+    .wrapper-container .toggle-btn i {
         display: block;
     }
-    .nav-collapse .wrapper-container ul{
+
+    .nav-collapse .wrapper-container ul {
         visibility: visible;
     }
 }

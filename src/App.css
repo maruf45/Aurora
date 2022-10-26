@@ -2,12 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,500;1,600;1,700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 /* Rest Basic style  */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
-body{
+
+body {
   font-family: 'Poppins', sans-serif;
+}
+
+.light-theme {
+  --text-color : #dc9454;
+  --nav-color: #f6ece1;
+  --logo-color: #dc9454;
+  --input-color: #dc9454;
+
+}
+.dark-theme{
+  --text-color: #eeeeee;
+  --nav-color: #222831;
+  --logo-color: #ffd369;
+  --input-color: #e9eff2;
 }

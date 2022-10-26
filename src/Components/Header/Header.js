@@ -1,10 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import { AuthContext } from "../../Context/UserContext";
 
 const Header = () => {
   const [toggle, setToggle] = useState(true);
+  const [toggleBtn, setToggleBtn] = useState(true)
+  const [theme, setTheme] = useState('light-theme');
+  const { user, logout } = useContext(AuthContext);
+  const handleLogout = () => {
+    logout()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const toggleTheme =( ) =>{
+    if(theme === 'dark-theme'){
+      setTheme('light-theme')
+    }else{
+      setTheme('dark-theme')
+    }
+  }
+  useEffect(() =>{
+    document.body.className = theme;
+  },[theme])
   return (
     <>
       <nav className={toggle ? "" : "nav-collapse"}>
@@ -28,48 +49,39 @@ const Header = () => {
             <li>
               <NavLink to="blogs">Blogs</NavLink>
             </li>
+            <li onClick={() => setToggleBtn(!toggleBtn)}>
+              {toggleBtn ? (
+                <i onClick={toggleTheme} className="fa-solid fa-moon"></i>
+              ) : (
+                <i onClick={toggleTheme} className="fa-solid fa-sun"></i>
+              )}
+            </li>
           </ul>
           <ul className="avatar">
             <div className="profile">
               <img
-                src="https://i.ibb.co/GnhkKS2/bubble-gum-avatar-icon.png"
+                title={user?.displayName}
+                src={
+                  user?.photoURL
+                    ? user?.photoURL
+                    : "https://i.ibb.co/GnhkKS2/bubble-gum-avatar-icon.png"
+                }
                 alt=""
               />
             </div>
             <li>
-              <NavLink to="signin">Sign in</NavLink>
+              {user?.uid ? (
+                <a onClick={handleLogout}>Sign Out</a>
+              ) : (
+                <NavLink to="signin">Sign in</NavLink>
+              )}
             </li>
           </ul>
           <div className="toggle-btn" onClick={() => setToggle(!toggle)}>
             {toggle ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
+              <i className="fa-solid fa-bars"></i>
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <i className="fa-solid fa-xmark"></i>
             )}
           </div>
         </div>
