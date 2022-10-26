@@ -1,0 +1,25 @@
+.home-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.home-content .left-col{
+    
+}
+.home-content .left-col h1 {
+    font-size: 45px;
+    line-height: 4.2rem;
+    color: var(--logo-color);
+}
+
+.home-content .right-col img {
+    width: 100%;
+    margin: auto;
+}
+@media screen and (max-width: 1050px) {
+    .home-content{
+        grid-template-columns: 1fr;
+    }
+}
