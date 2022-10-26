@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import NotFoundPage from "../Components/404Page/NotFoundPage";
 import SignIn from "../Components/Authentication/Signin/SignIn";
 import SignUp from "../Components/Authentication/Signup/SignUp";
 import Blogs from "../Components/Blogs/Blogs";
@@ -15,9 +16,9 @@ const router = createBrowserRouter([
       { path: "blogs", element: <Blogs /> },
       { path: "signin", element: <SignIn /> },
       { path: "signup", element: <SignUp /> },
+      { path: "*" , element: <NotFoundPage/>},
     ],
-  },
-  { path: "*" },
+},
 ]);
 
 export default router;

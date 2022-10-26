@@ -3,7 +3,11 @@ import React from 'react';
 const Home = () => {
     return (
         <>
-         <h1>home is home</h1>   
+         <div className="home-container">
+            <div className="wrapper-container">
+                
+            </div>
+         </div>
         </>
     );
 };

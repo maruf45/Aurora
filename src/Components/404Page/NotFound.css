@@ -1,0 +1,7 @@
+.notFound {
+    text-align: center;
+    display: grid;
+    margin-top: 100px;
+    justify-content: center;
+    align-content: center;
+}
