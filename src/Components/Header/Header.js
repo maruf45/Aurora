@@ -7,7 +7,7 @@ import { AuthContext } from "../../Context/UserContext";
 const Header = () => {
   const [toggle, setToggle] = useState(true);
   const [toggleBtn, setToggleBtn] = useState(true)
-  const [theme, setTheme] = useState('light-theme');
+  const [theme, setTheme] = useState('dark-theme');
   const { user, logout } = useContext(AuthContext);
   const handleLogout = () => {
     logout()
@@ -51,9 +51,9 @@ const Header = () => {
             </li>
             <li onClick={() => setToggleBtn(!toggleBtn)}>
               {toggleBtn ? (
-                <i onClick={toggleTheme} className="fa-solid fa-moon"></i>
-              ) : (
                 <i onClick={toggleTheme} className="fa-solid fa-sun"></i>
+                ) : (
+                <i onClick={toggleTheme} className="fa-solid fa-moon"></i>
               )}
             </li>
           </ul>
