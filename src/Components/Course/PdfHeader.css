@@ -1,0 +1,13 @@
+header{
+    width: 100%;
+    text-align: center;
+}
+header button{
+    border: none;
+    outline: none;
+    background-color: var(--logo-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 50px; 
+    cursor: pointer;
+}
