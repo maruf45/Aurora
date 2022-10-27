@@ -1,18 +1,12 @@
-import React from 'react';
-import LeftSideNav from './LeftSideNav';
+import React from "react";
+import Category from "./Category";
 
 const Course = () => {
-    return (
-        <>
-         <div className="course-container">
-            <div className="wrapper-container">
-                <div className="left-side-nav">
-                    <LeftSideNav/>
-                </div>
-            </div>
-         </div>
-        </>
-    );
+  return (
+    <>
+      <Category></Category>
+    </>
+  );
 };
 
 export default Course;
