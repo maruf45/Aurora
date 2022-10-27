@@ -4,10 +4,12 @@ import SignIn from "../Components/Authentication/Signin/SignIn";
 import SignUp from "../Components/Authentication/Signup/SignUp";
 import Blogs from "../Components/Blogs/Blogs";
 import Category from "../Components/Course/Category";
+import CheckOut from "../Components/Course/CheckOut";
 import Course from "../Components/Course/Course";
 import CourseDetail from "../Components/Course/CourseDetail";
 import Home from "../Components/Home/Home";
 import Main from "../Components/Main/Main";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +32,7 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/course/${params.courseId}`),
       },
+      {path : 'checkout/:courseDetailId', element: <PrivateRoute><CheckOut/></PrivateRoute>},
       {
         path: "blogs",
         element: <Blogs />,

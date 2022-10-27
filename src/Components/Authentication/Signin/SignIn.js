@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Context/UserContext";
 import "../LoginForm.css";
 
 const SignIn = () => {
   const { signIn,googleLogIn,githubLogIn } = useContext(AuthContext);
   const Swal = require("sweetalert2");
-
+  const navigate = useNavigate()
+  const location = useLocation()
+  const from = location.state?.from?.pathname || '/';
   let [validateUserInfo, setValidateUserInfo] = useState({
     email: "",
     password: "",
@@ -30,6 +32,7 @@ const SignIn = () => {
           icon: "success",
           confirmButtonText: "Ok",
         });
+        navigate(from, {replace: true});
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -80,6 +83,8 @@ const SignIn = () => {
     googleLogIn()
     .then(result =>{
         const user = result.user;
+        navigate(from, {replace: true});
+
     })
     .catch(error =>{
         const errorMessage = error.message;
@@ -89,6 +94,7 @@ const SignIn = () => {
     githubLogIn()
     .then(result =>{
         const user = result.user;
+        navigate(from, {replace: true});
     })
     .catch(error =>{
         const errorMessage = error.message;

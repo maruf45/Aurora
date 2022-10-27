@@ -10,7 +10,7 @@ const CourseDetail = () => {
           <img src={courseDetail.image} alt="" />
           <h2>{courseDetail?.title}</h2>
           <p> {courseDetail?.description}</p>
-          <Link>Get Premium</Link>
+          <Link to={`/checkout/${courseDetail.id}`}>Get Premium</Link>
         </div>
       </div>
     </>
