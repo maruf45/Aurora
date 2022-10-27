@@ -17,7 +17,7 @@ const Home = () => {
               </p>
             </div>
             <div className="right-col">
-              <img src="https://i.ibb.co/sF1PtdV/course.png" alt="" />
+              <img src="https://i.ibb.co/Pxx2yQw/course.png" alt="" />
             </div>
           </div>
         </div>
