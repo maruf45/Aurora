@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
+import {NavLink } from "react-router-dom";
+import "./LeftSideNav.css";
 const LeftSideNav = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -10,16 +10,20 @@ const LeftSideNav = () => {
   }, []);
   return (
     <>
-      <h3>AllCategories {categories.length}</h3>
-      {categories.map((category) => {
-        return (
-          <>
-            <Link to={`/courses/${category.id}`}>
-              {category.categories} <br />{" "}
-            </Link>
-          </>
-        );
-      })}
+      <div className="left-side-nav">
+        <h3>AllCategories {categories.length}</h3>
+        {categories.map((category) => {
+          return (
+            <React.Fragment key={category.id}>
+              <li>
+                <NavLink to={`/courses/${category.id}`}>
+                  {category.categories}
+                </NavLink>
+              </li>
+            </React.Fragment>
+          );
+        })}
+      </div>
     </>
   );
 };

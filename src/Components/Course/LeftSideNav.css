@@ -1,0 +1,29 @@
+.left-side-nav {
+    background-color: #2228318e;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+.left-side-nav h3 {
+    color: var(--nav-color)
+}
+
+.left-side-nav li {
+
+    padding: 8px 15px;
+    list-style: none;
+}
+
+.left-side-nav li a {
+    padding: 4px 7px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    color: var(--nav-color);
+
+}
+
+.left-side-nav li .active {
+    box-shadow: 0px 0px 5px var(--text-color),
+        0px 0px 5px var(--text-color);
+}

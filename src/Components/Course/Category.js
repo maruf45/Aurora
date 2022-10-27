@@ -1,18 +1,31 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import LeftSideNav from "./LeftSideNav";
-
+import './Category.css'
 const Category = () => {
-  const categories = useLoaderData();
+  const courseDetail = useLoaderData();
 
   return (
     <>
       <div className="course-container">
+        <LeftSideNav />
         <div className="wrapper-container">
-          <div className="left-side-nav">
-            <LeftSideNav />
+          <div className="right-side">
+            {courseDetail?.map((course) => {
+              return (
+                <React.Fragment key={course.id}>
+                  <div  className="courses-container">
+                    <div className="course-wrapper">
+                        <img src={course.image} alt="" />
+                        <h3>{course.title}</h3>
+                        <p>{course.description}</p>
+                        <Link to={`/course-detail/${course.id}`}>Get Details </Link>
+                    </div>
+                  </div>
+                </React.Fragment>
+              );
+            })}
           </div>
-          <div className="right-side">data {categories?.length}</div>
         </div>
       </div>
     </>
