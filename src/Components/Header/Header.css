@@ -20,6 +20,12 @@ nav {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 400;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+.wrapper-container ul li .active{
+    box-shadow: 0px 0px 5px var(--text-color),
+        0px 0px 5px var(--text-color);
 }
 .wrapper-container ul li i{
     font-size: 25px;
@@ -74,6 +80,7 @@ nav {
 a {
     cursor: pointer;
 }
+
 
 
 @media screen and (max-width: 700px) {
