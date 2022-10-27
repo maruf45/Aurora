@@ -28,7 +28,6 @@ const SignUp = () => {
         // Signed in
         const user = userCredential.user;
         userProfileUpdate(name, photoUrl);
-        console.log(user);
         Swal.fire({
             title: 'Good Job',
             text: 'Successfully Register',
@@ -54,7 +53,6 @@ const SignUp = () => {
       updateUserProfile(profile)
         .then(() => {})
         .catch((error) => {
-          console.log(error.message);
         });
     };
   };
@@ -73,7 +71,6 @@ const SignUp = () => {
   //   Identify password validation
   const passwordValidation = (event) => {
     let password = event.target.value;
-    console.log(password);
     if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
       setErrors({
         ...errors,

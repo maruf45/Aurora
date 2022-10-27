@@ -59,7 +59,6 @@ const SignIn = () => {
   //   Identify password validation
   const passwordValidation = (event) => {
     let password = event.target.value;
-    console.log(password);
     if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
       setErrors({
         ...errors,

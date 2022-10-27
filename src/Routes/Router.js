@@ -25,13 +25,13 @@ const router = createBrowserRouter([
         path: "courses/:id",
         element: <Category />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courses/${params.id}`),
+          fetch(`https://server-side-steel.vercel.app/courses/${params.id}`),
       },
       {
         path: "course-detail/:courseId",
         element: <CourseDetail />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course/${params.courseId}`),
+          fetch(`https://server-side-steel.vercel.app/course/${params.courseId}`),
       },
       {
         path: "checkout/:courseDetailId",
@@ -41,17 +41,17 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course/${params.courseDetailId}`),
+          fetch(`https://server-side-steel.vercel.app/course/${params.courseDetailId}`),
       },
       {
         path: "blogs",
         element: <Blogs />,
-        loader: () => fetch("http://localhost:5000/blogs"),
+        loader: () => fetch("https://server-side-steel.vercel.app/blogs"),
       },
       {
         path: "faq",
         element: <FAQ />,
-        loader: () => fetch("http://localhost:5000/faq"),
+        loader: () => fetch("https://server-side-steel.vercel.app/faq"),
       },
       { path: "signin", element: <SignIn /> },
       { path: "signup", element: <SignUp /> },

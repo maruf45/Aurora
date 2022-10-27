@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import './Blogs.css'
 const Blogs = () => {
   const blogs = useLoaderData();
-  console.log(blogs);
+  
   return (
     <>
       <div className="blogs-container">
