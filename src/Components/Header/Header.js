@@ -6,8 +6,8 @@ import { AuthContext } from "../../Context/UserContext";
 
 const Header = () => {
   const [toggle, setToggle] = useState(true);
-  const [toggleBtn, setToggleBtn] = useState(true)
-  const [theme, setTheme] = useState('dark-theme');
+  const [toggleBtn, setToggleBtn] = useState(true);
+  const [theme, setTheme] = useState("dark-theme");
   const { user, logout } = useContext(AuthContext);
   const handleLogout = () => {
     logout()
@@ -16,16 +16,16 @@ const Header = () => {
         console.log(error);
       });
   };
-  const toggleTheme =( ) =>{
-    if(theme === 'dark-theme'){
-      setTheme('light-theme')
-    }else{
-      setTheme('dark-theme')
+  const toggleTheme = () => {
+    if (theme === "dark-theme") {
+      setTheme("light-theme");
+    } else {
+      setTheme("dark-theme");
     }
-  }
-  useEffect(() =>{
+  };
+  useEffect(() => {
     document.body.className = theme;
-  },[theme])
+  }, [theme]);
   return (
     <>
       <nav className={toggle ? "" : "nav-collapse"}>
@@ -38,7 +38,9 @@ const Header = () => {
           </div>
           <ul>
             <li>
-              <NavLink to="/" end>Home</NavLink>
+              <NavLink to="/" end>
+                Home
+              </NavLink>
             </li>
             <li>
               <NavLink to="courses">Courses</NavLink>
@@ -52,22 +54,24 @@ const Header = () => {
             <li onClick={() => setToggleBtn(!toggleBtn)}>
               {toggleBtn ? (
                 <i onClick={toggleTheme} className="fa-solid fa-sun"></i>
-                ) : (
+              ) : (
                 <i onClick={toggleTheme} className="fa-solid fa-moon"></i>
               )}
             </li>
           </ul>
           <ul className="avatar">
             <div className="profile">
-              <img
-                title={user?.displayName}
-                src={
-                  user?.photoURL
-                    ? user?.photoURL
-                    : "https://i.ibb.co/GnhkKS2/bubble-gum-avatar-icon.png"
-                }
-                alt=""
-              />
+              {user?.uid && (
+                <img
+                  title={user?.displayName}
+                  src={
+                    user?.photoURL
+                      ? user?.photoURL
+                      : "https://i.ibb.co/GnhkKS2/bubble-gum-avatar-icon.png"
+                  }
+                  alt=""
+                />
+              )}
             </div>
             <li>
               {user?.uid ? (

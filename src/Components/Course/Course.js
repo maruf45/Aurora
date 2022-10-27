@@ -1,9 +1,16 @@
 import React from 'react';
+import LeftSideNav from './LeftSideNav';
 
 const Course = () => {
     return (
         <>
-         <h2>THis is course sectino</h2>   
+         <div className="course-container">
+            <div className="wrapper-container">
+                <div className="left-side-nav">
+                    <LeftSideNav/>
+                </div>
+            </div>
+         </div>
         </>
     );
 };
