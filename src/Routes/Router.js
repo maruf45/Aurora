@@ -7,6 +7,7 @@ import Category from "../Components/Course/Category";
 import CheckOut from "../Components/Course/CheckOut";
 import Course from "../Components/Course/Course";
 import CourseDetail from "../Components/Course/CourseDetail";
+import FAQ from "../Components/FAQ/FAQ";
 import Home from "../Components/Home/Home";
 import Main from "../Components/Main/Main";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         path: "blogs",
         element: <Blogs />,
         loader: () => fetch("http://localhost:5000/blogs"),
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
+        loader: () => fetch("http://localhost:5000/faq"),
       },
       { path: "signin", element: <SignIn /> },
       { path: "signup", element: <SignUp /> },
