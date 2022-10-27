@@ -3,7 +3,7 @@
 <P>Welcome to our learning platform. this is grate place to learn html css javascript,
 our course especially create for absolute beginner. learn anything our course.</p>
 
-### live Project link : 
+### live Project link : https://sweet-otter-ec60f7.netlify.app/
     
 ### Which Technology i use this project
 <p>what is an npm package that enables you to implement dynamic routing in a web app. It allows you to display pages and allow users to navigate them. It is a fully-featured client and server-side routing library for React.</p>
