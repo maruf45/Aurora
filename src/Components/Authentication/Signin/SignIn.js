@@ -35,7 +35,14 @@ const SignIn = () => {
         navigate(from, {replace: true});
       })
       .catch((error) => {
-        const errorMessage = error.message;
+        let errorMessage = error.message;
+        console.log(error);
+        if(errorMessage === 'Firebase: Error (auth/user-not-found).'){
+          errorMessage = 'Your Email address is not use'
+        }
+        else if(errorMessage === 'Firebase: Error (auth/wrong-password).'){
+          errorMessage = 'Wrong password remember your password'
+        }
         Swal.fire({
           title: "Error!",
           text: errorMessage,
